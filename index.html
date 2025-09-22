@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindGrafts Stress Assessment</title>
+    <link rel="icon" type="image/x-icon" href="https://i.ibb.co/bT7k80C/Mingrafts-LOGO.jpg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+        .primary-bg {
+            background-color: #d62828;
+        }
+        .primary-text {
+            color: #d62828;
+        }
+        .secondary-bg {
+            background-color: #0a7a3e;
+        }
+        .secondary-text {
+            color: #0a7a3e;
+        }
+        .warning-bg {
+            background-color: #ff8c00;
+        }
+        .warning-text {
+            color: #ff8c00;
+        }
+        .card-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 py-8">
+        <!-- Header -->
+        <header class="text-center mb-12" data-aos="fade-down">
+            <img src="https://i.ibb.co/bT7k80C/Mingrafts-LOGO.jpg" alt="MindGrafts Logo" class="w-24 h-24 mx-auto mb-4 rounded-full">
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-2">MindGrafts Stress Assessment</h1>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                Check your stress levels, see how much time it silently wastes, and learn how therapy helps you reclaim your time, money, and health.
+            </p>
+        </header>
+
+        <!-- Section 1: Stress Management Questions -->
+        <section class="bg-white rounded-xl p-6 mb-8 card-shadow" data-aos="fade-up">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Stress Management Questions</h2>
+            <p class="text-gray-600 mb-6">Rate from 1 (almost always) to 5 (never).</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <!-- Question 1-10 -->
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between">
+                        <label class="text-gray-700">1. I feel overwhelmed by my responsibilities</label>
+                        <input type="number" min="1" max="5" class="question-input w-16 h-10 border border-gray-300 rounded-md text-center" value="0">
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <label class="text-gray-700">2. I have trouble relaxing</label>
+                        <input type="number" min="1" max="5" class="question-input w-16 h-10 border border-gray-300 rounded-md text-center" value="0">
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <label class="text-gray-700">3. I feel irritable or angry</label>
+                        <input type="number" min="1" max="5" class="question-input w-16 h-10 border border-gray-300 rounded-md text-center" value="0">
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <label class="text-gray-700">4. I have difficulty concentrating</label>
+                        <input type="number" min="1" max="5" class="question-input w-16 h-10 border border-gray-300 rounded-md text-center" value="0">
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <label class="text-gray-700">5. I feel anxious or worried</label>
+                        <input type="number" min="1" max="5" class="question-input w-16 h-10 border border-gray-300 rounded-md text-center" value="0">
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <label class="text-gray-700">6. I have trouble sleeping</label>
+                        <input type="number" min="1" max="5" class="question-input w-16 h-10 border border-gray-300 rounded-md text-center" value="0">
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <label class="text-gray-700">7. I feel fatigued or low on energy</label>
+                        <input type="number" min="1" max="5" class="question-input w-16 h-10 border border-gray-300 rounded-md text-center" value="0">
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <label class="text-gray-700">8. I experience physical symptoms (headaches, muscle tension, etc.)</label>
+                        <input type="number" min="1" max="5" class="question-input w-16 h-10 border border-gray-300 rounded-md text-center" value="0">
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <label class="text-gray-700">9. I procrastinate on important tasks</label>
+                        <input type="number" min="1" max="5" class="question-input w-16 h-10 border border-gray-300 rounded-md text-center" value="0">
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <label class="text-gray-700">10. I feel like I'm not accomplishing enough</label>
+                        <input type="number" min="1" max="5" class="question-input w-16 h-10 border border-gray-300 rounded-md text-center" value="0">
+                    </div>
+                </div>
+                
+                <!-- Question 11-20 -->
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between">
+                        <label class="text-gray-700">11. I avoid social situations</label>
+                        <input type="number" min="1" max="5" class="question-input w-16 h-10 border border-gray-300 rounded-md text-center" value="0">
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <label class="text-gray-700">12. I have negative thoughts about myself</label>
+                        <input type="number" min="1" max="5" class="question-input w-16 h-10 border border-gray-300 rounded-md text-center" value="0">
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <label class="text-gray-700">13. I feel disconnected from others</label>
+                        <input type="number" min="1" max="5" class="question-input w-16 h-10 border border-gray-300 rounded-md text-center" value="0">
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <label class="text-gray-700">14. I have difficulty making decisions</label>
+                        <input type="number" min="1" max="5" class="question-input w-16 h-10 border border-gray-300 rounded-md text-center" value="0">
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <label class="text-gray-700">15. I feel like I'm not in control</label>
+                        <input type="number" min="1" max="5" class="question-input w-16 h-10 border border-gray-300 rounded-md text-center" value="0">
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <label class="text-gray-700">16. I have trouble organizing my tasks</label>
+                        <input type="number" min="1" max="5" class="question-input w-16 h-10 border border-gray-300 rounded-md text-center" value="0">
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <label class="text-gray-700">17. I set unrealistic standards for myself</label>
+                        <input type="number" min="1" max="5" class="question-input w-16 h-10 border border-gray-300 rounded-md text-center" value="0">
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <label class="text-gray-700">18. I feel like I'm running out of time</label>
+                        <input type="number" min="1" max="5" class="question-input w-16 h-10 border border-gray-300 rounded-md text-center" value="0">
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <label class="text-gray-700">19. I neglect self-care activities</label>
+                        <input type="number" min="1" max="5" class="question-input w-16 h-10 border border-gray-300 rounded-md text-center" value="0">
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <label class="text-gray-700">20. I feel like stress is affecting my health</label>
+                        <input type="number" min="1" max="5" class="question-input w-16 h-10 border border-gray-300 rounded-md text-center" value="0">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Stress Symptom Checklist -->
+        <section class="bg-white rounded-xl p-6 mb-8 card-shadow" data-aos="fade-up">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Stress Symptom Checklist</h2>
+            <p class="text-gray-600 mb-6">Tick the symptoms you've experienced recently.</p>
+            
+            <div class="flex items-center mb-6">
+                <span class="text-gray-700 mr-2">Symptoms checked:</span>
+                <span id="symptom-count" class="px-3 py-1 rounded-full bg-gray-200 text-gray-800">—</span>
+                <span id="symptom-level" class="ml-2 font-medium"></span>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="space-y-3">
+                    <label class="flex items-center">
+                        <input type="checkbox" class="symptom-checkbox h-5 w-5 text-primary-500 rounded border-gray-300">
+                        <span class="ml-2 text-gray-700">Headaches</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="symptom-checkbox h-5 w-5 text-primary-500 rounded border-gray-300">
+                        <span class="ml-2 text-gray-700">Muscle tension or pain</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="symptom-checkbox h-5 w-5 text-primary-500 rounded border-gray-300">
+                        <span class="ml-2 text-gray-700">Chest pain</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="symptom-checkbox h-5 w-5 text-primary-500 rounded border-gray-300">
+                        <span class="ml-2 text-gray-700">Fatigue</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="symptom-checkbox h-5 w-5 text-primary-500 rounded border-gray-300">
+                        <span class="ml-2 text-gray-700">Stomach upset</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="symptom-checkbox h-5 w-5 text-primary-500 rounded border-gray-300">
+                        <span class="ml-2 text-gray-700">Sleep problems</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="symptom-checkbox h-5 w-5 text-primary-500 rounded border-gray-300">
+                        <span class="ml-2 text-gray-700">Anxiety</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="symptom-checkbox h-5 w-5 text-primary-500 rounded border-gray-300">
+                        <span class="ml-2 text-gray-700">Restlessness</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="symptom-checkbox h-5 w-5 text-primary-500 rounded border-gray-300">
+                        <span class="ml-2 text-gray-700">Lack of motivation</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="symptom-checkbox h-5 w-5 text-primary-500 rounded border-gray-300">
+                        <span class="ml-2 text-gray-700">Feeling overwhelmed</span>
+                    </label>
+                </div>
+                <div class="space-y-3">
+                    <label class="flex items-center">
+                        <input type="checkbox" class="symptom-checkbox h-5 w-5 text-primary-500 rounded border-gray-300">
+                        <span class="ml-2 text-gray-700">Irritability or anger</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="symptom-checkbox h-5 w-5 text-primary-500 rounded border-gray-300">
+                        <span class="ml-2 text-gray-700">Sadness or depression</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="symptom-checkbox h-5 w-5 text-primary-500 rounded border-gray-300">
+                        <span class="ml-2 text-gray-700">Social withdrawal</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="symptom-checkbox h-5 w-5 text-primary-500 rounded border-gray-300">
+                        <span class="ml-2 text-gray-700">Overeating or undereating</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="symptom-checkbox h-5 w-5 text-primary-500 rounded border-gray-300">
+                        <span class="ml-2 text-gray-700">Angry outbursts</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="symptom-checkbox h-5 w-5 text-primary-500 rounded border-gray-300">
+                        <span class="ml-2 text-gray-700">Drug or alcohol misuse</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="symptom-checkbox h-5 w-5 text-primary-500 rounded border-gray-300">
+                        <span class="ml-2 text-gray-700">Tobacco use</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="symptom-checkbox h-5 w-5 text-primary-500 rounded border-gray-300">
+                        <span class="ml-2 text-gray-700">Procrastination</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="symptom-checkbox h-5 w-5 text-primary-500 rounded border-gray-300">
+                        <span class="ml-2 text-gray-700">Forgetfulness</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="symptom-checkbox h-5 w-5 text-primary-500 rounded border-gray-300">
+                        <span class="ml-2 text-gray-700">Poor concentration</span>
+                    </label>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Calculate Stress Score -->
+        <section class="bg-white rounded-xl p-6 mb-8 card-shadow text-center" data-aos="fade-up">
+            <button id="calculate-btn" class="primary-bg hover:bg-red-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition duration-300">
+                Calculate My Stress Score
+            </button>
+            
+            <div id="score-result" class="mt-8 hidden">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Your Stress Score</h3>
+                <div class="text-5xl font-bold mb-4" id="stress-score">0</div>
+                <p class="text-lg" id="stress-interpretation"></p>
+            </div>
+        </section>
+
+        <!-- Section 4: Estimated Hours Wasted -->
+        <section id="hours-section" class="bg-white rounded-xl p-6 mb-8 card-shadow hidden" data-aos="fade-up">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Estimated Hours Wasted</h2>
+            <p class="text-gray-600 mb-6">Based on your stress level, here's how much time you might be losing each month:</p>
+            
+            <div class="mb-6">
+                <div class="flex justify-between items-center mb-2">
+                    <span class="text-gray-700">Total wasted hours per month:</span>
+                    <span id="total-hours" class="text-xl font-bold">0</span>
+                </div>
+            </div>
+            
+            <div class="space-y-4">
+                <div>
+                    <div class="flex justify-between mb-1">
+                        <span class="text-gray-700">Avoidance</span>
+                        <span id="avoidance-hours" class="font-medium">0 hrs</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                        <div id="avoidance-bar" class="bg-blue-600 h-2.5 rounded-full" style="width: 0%"></div>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex justify-between mb-1">
+                        <span class="text-gray-700">Procrastination</span>
+                        <span id="procrastination-hours" class="font-medium">0 hrs</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                        <div id="procrastination-bar" class="bg-purple-600 h-2.5 rounded-full" style="width: 0%"></div>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex justify-between mb-1">
+                        <span class="text-gray-700">Perfectionism</span>
+                        <span id="perfectionism-hours" class="font-medium">0 hrs</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                        <div id="perfectionism-bar" class="bg-yellow-600 h-2.5 rounded-full" style="width: 0%"></div>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex justify-between mb-1">
+                        <span class="text-gray-700">Poor concentration</span>
+                        <span id="concentration-hours" class="font-medium">0 hrs</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                        <div id="concentration-bar" class="bg-red-600 h-2.5 rounded-full" style="width: 0%"></div>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex justify-between mb-1">
+                        <span class="text-gray-700">Sleep problems</span>
+                        <span id="sleep-hours" class="font-medium">0 hrs</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                        <div id="sleep-bar" class="bg-green-600 h-2.5 rounded-full" style="width: 0%"></div>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex justify-between mb-1">
+                        <span class="text-gray-700">Indecisiveness</span>
+                        <span id="indecisiveness-hours" class="font-medium">0 hrs</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                        <div id="indecisiveness-bar" class="bg-pink-600 h-2.5 rounded-full" style="width: 0%"></div>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex justify-between mb-1">
+                        <span class="text-gray-700">Disorganization</span>
+                        <span id="disorganization-hours" class="font-medium">0 hrs</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                        <div id="disorganization-bar" class="bg-indigo-600 h-2.5 rounded-full" style="width: 0%"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: ROI Calculator -->
+        <section id="roi-section" class="bg-white rounded-xl p-6 mb-8 card-shadow hidden" data-aos="fade-up">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">ROI Calculator</h2>
+            
+            <div class="mb-6">
+                <label class="block text-gray-700 mb-2">How much is your 1 hour worth (₹)?</label>
+                <input type="number" id="hourly-rate" class="w-full md:w-64 h-12 border border-gray-300 rounded-md px-4" placeholder="Enter your hourly rate" min="0" value="500">
+            </div>
+            
+            <div id="roi-results" class="space-y-4 hidden">
+                <div class="p-4 bg-blue-50 rounded-lg">
+                    <p class="text-gray-700">If your time is worth <span id="hourly-rate-display" class="font-bold">₹0</span>/hour and you are losing <span id="wasted-hours-display" class="font-bold">0</span> hours per month due to stress, you are losing <span id="money-lost" class="font-bold">₹0</span> monthly.</p>
+                </div>
+                
+                <div class="p-4 bg-green-50 rounded-lg">
+                    <p class="text-gray-700">A single therapy session (₹299) can help reduce this loss and improve your focus, sleep, and energy.</p>
+                </div>
+                
+                <div class="flex items-center justify-between p-4 bg-yellow-50 rounded-lg">
+                    <div>
+                        <p class="text-gray-700 font-semibold">Potential monthly savings:</p>
+                        <p class="text-xl font-bold" id="potential-savings">₹0</p>
+                    </div>
+                    <div class="text-right">
+                        <p class="text-gray-700 font-semibold">ROI after one session:</p>
+                        <p class="text-xl font-bold" id="roi-value">0%</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Call to Action -->
+        <section id="cta-section" class="border-2 border-red-500 rounded-xl p-6 mb-8 hidden" data-aos="fade-up">
+            <div class="text-center">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Your stress is costing you dearly</h2>
+                <p class="text-lg text-gray-700 mb-6">Book a discounted therapy session now for just ₹299 and reclaim your time, focus, and peace of mind.</p>
+                <a href="https://rzp.io/rzp/lMpXAMlc" target="_blank" class="primary-bg hover:bg-red-700 text-white font-bold py-3 px-8 rounded-lg text-lg inline-block transition duration-300">
+                    Book Session — ₹299
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center text-gray-600 mt-12" data-aos="fade-up">
+            <p>© MindGrafts — Renew • Reconnect • Rebuild</p>
+        </footer>
+    </div>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+
+        // Initialize feather icons
+        feather.replace();
+
+        // Symptom count functionality
+        const symptomCheckboxes = document.querySelectorAll('.symptom-checkbox');
+        const symptomCountElement = document.getElementById('symptom-count');
+        const symptomLevelElement = document.getElementById('symptom-level');
+
+        symptomCheckboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', updateSymptomCount);
+        });
+
+        function updateSymptomCount() {
+            const checkedCount = document.querySelectorAll('.symptom-checkbox:checked').length;
+            symptomCountElement.textContent = checkedCount;
+            
+            if (checkedCount === 0) {
+                symptomCountElement.textContent = '—';
+                symptomLevelElement.textContent = '';
+                symptomLevelElement.className = '';
+            } else if (checkedCount <= 7) {
+                symptomLevelElement.textContent = 'Low';
+                symptomLevelElement.className = 'secondary-text';
+                symptomCountElement.className = 'px-3 py-1 rounded-full bg-green-100 secondary-text';
+            } else if (checkedCount <= 14) {
+                symptomLevelElement.textContent = 'Moderate';
+                symptomLevelElement.className = 'warning-text';
+                symptomCountElement.className = 'px-3 py-1 rounded-full bg-orange-100 warning-text';
+            } else if (checkedCount <= 21) {
+                symptomLevelElement.textContent = 'High';
+                symptomLevelElement.className = 'primary-text font-bold';
+                symptomCountElement.className = 'px-3 py-1 rounded-full bg-red-100 primary-text font-bold';
+            } else {
+                symptomLevelElement.textContent = 'Very High';
+                symptomLevelElement.className = 'primary-text font-bold';
+                symptomCountElement.className = 'px-3 py-1 rounded-full bg-red-100 primary-text font-bold';
+            }
+        }
+
+        // Calculate stress score
+        const calculateBtn = document.getElementById('calculate-btn');
+        const questionInputs = document.querySelectorAll('.question-input');
+        const scoreResult = document.getElementById('score-result');
+        const stressScoreElement = document.getElementById('stress-score');
+        const stressInterpretationElement = document.getElementById('stress-interpretation');
+        const hoursSection = document.getElementById('hours-section');
+        const roiSection = document.getElementById('roi-section');
+        const ctaSection = document.getElementById('cta-section');
+
+        calculateBtn.addEventListener('click', calculateStressScore);
+
+        function calculateStressScore() {
+            let total = 0;
+            let unansweredQuestions = false;
+            
+            questionInputs.forEach(input => {
+                const value = parseInt(input.value);
+                if (value < 1 || value > 5) {
+                    unansweredQuestions = true;
+                    input.classList.add('border-red-500');
+                } else {
+                    input.classList.remove('border-red-500');
+                    total += value;
+                }
+            });
+            
+            if (unansweredQuestions) {
+                alert('Please answer all questions with a rating between 1 and 5.');
+                return;
+            }
+            
+            const stressScore = total - 20; // Subtract 20 (minimum possible score)
+            stressScoreElement.textContent = stressScore;
+            
+            let interpretation = '';
+            let interpretationClass = '';
+            
+            if (stressScore <= 5) {
+                interpretation = 'Low vulnerability to stress';
+                interpretationClass = 'secondary-text';
+            } else if (stressScore <= 25) {
+                interpretation = 'Vulnerable to stress';
+                interpretationClass = 'warning-text';
+            } else if (stressScore <= 55) {
+                interpretation = 'Seriously vulnerable to stress';
+                interpretationClass = 'primary-text';
+            } else {
+                interpretation = 'Extremely vulnerable to stress';
+                interpretationClass = 'primary-text font-bold';
+            }
+            
+            stressInterpretationElement.textContent = interpretation;
+            stressInterpretationElement.className = interpretationClass;
+            scoreResult.classList.remove('hidden');
+            
+            // Show appropriate message based on stress score
+            const symptomCount = document.querySelectorAll('.symptom-checkbox:checked').length;
+            if (stressScore >= 15 || symptomCount >= 15) {
+                // Calculate wasted hours and show ROI section and CTA for high stress
+                calculateWastedHours(stressScore);
+                roiSection.classList.remove('hidden');
+                ctaSection.classList.remove('hidden');
+            } else {
+                // Hide ROI and hours sections and show wellness message for low stress
+                roiSection.classList.add('hidden');
+                hoursSection.classList.add('hidden');
+                ctaSection.innerHTML = `
+                    <div class="text-center">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4">Your stress level is currently in a manageable range</h2>
+                        <p class="text-lg text-gray-700 mb-6">
+                            Keep up your healthy routines like good sleep, exercise, and relaxation. 
+                            Stress can build silently over time, so staying mindful is key.
+                        </p>
+                        <p class="text-lg text-gray-700 mb-6">
+                            If you'd like to strengthen your coping skills and prevent future stress overload, 
+                            consider booking a wellness session — it's a small step for long-term peace of mind.
+                        </p>
+                        <a href="https://rzp.io/rzp/lMpXAMlc" target="_blank" class="primary-bg hover:bg-red-700 text-white font-bold py-3 px-8 rounded-lg text-lg inline-block transition duration-300">
+                            Book Wellness Session — ₹299
+                        </a>
+                    </div>
+                `;
+                ctaSection.classList.remove('hidden');
+                ctaSection.classList.remove('border-red-500');
+                ctaSection.classList.add('border-green-500');
+            }
+        }
+
+        // Calculate wasted hours
+        function calculateWastedHours(stressScore) {
+            const excessScore = Math.max(0, stressScore - 5);
+            
+            const avoidance = excessScore * 0.05;
+            const procrastination = excessScore * 0.1;
+            const perfectionism = excessScore * 0.08;
+            const concentration = excessScore * 0.12;
+            const sleep = excessScore * 0.15;
+            const indecisiveness = excessScore * 0.07;
+            const disorganization = excessScore * 0.08;
+            
+            const totalHours = avoidance + procrastination + perfectionism + concentration + sleep + indecisiveness + disorganization;
+            
+            document.getElementById('total-hours').textContent = Math.round(totalHours);
+            document.getElementById('avoidance-hours').textContent = Math.round(avoidance) + ' hrs';
+            document.getElementById('procrastination-hours').textContent = Math.round(procrastination) + ' hrs';
+            document.getElementById('perfectionism-hours').textContent = Math.round(perfectionism) + ' hrs';
+            document.getElementById('concentration-hours').textContent = Math.round(concentration) + ' hrs';
+            document.getElementById('sleep-hours').textContent = Math.round(sleep) + ' hrs';
+            document.getElementById('indecisiveness-hours').textContent = Math.round(indecisiveness) + ' hrs';
+            document.getElementById('disorganization-hours').textContent = Math.round(disorganization) + ' hrs';
+            
+            // Update progress bars
+            const maxHours = Math.max(1, avoidance, procrastination, perfectionism, concentration, sleep, indecisiveness, disorganization);
+            
+            document.getElementById('avoidance-bar').style.width = `${(avoidance / maxHours) * 100}%`;
+            document.getElementById('procrastination-bar').style.width = `${(procrastination / maxHours) * 100}%`;
+            document.getElementById('perfectionism-bar').style.width = `${(perfectionism / maxHours) * 100}%`;
+            document.getElementById('concentration-bar').style.width = `${(concentration / maxHours) * 100}%`;
+            document.getElementById('sleep-bar').style.width = `${(sleep / maxHours) * 100}%`;
+            document.getElementById('indecisiveness-bar').style.width = `${(indecisiveness / maxHours) * 100}%`;
+            document.getElementById('disorganization-bar').style.width = `${(disorganization / maxHours) * 100}%`;
+            
+            // Show hours section
+            hoursSection.classList.remove('hidden');
+            
+            // Update ROI if hourly rate is already set
+            const hourlyRate = parseFloat(document.getElementById('hourly-rate').value);
+            if (hourlyRate > 0) {
+                updateROI(totalHours, hourlyRate);
+            }
+        }
+
+        // ROI Calculator
+        const hourlyRateInput = document.getElementById('hourly-rate');
+        const roiResults = document.getElementById('roi-results');
+        
+        hourlyRateInput.addEventListener('input', () => {
+            const hourlyRate = parseFloat(hourlyRateInput.value);
+            const totalHours = parseFloat(document.getElementById('total-hours').textContent) || 0;
+            
+            if (hourlyRate > 0 && totalHours > 0) {
+                updateROI(totalHours, hourlyRate);
+            }
+        });
+
+        function updateROI(totalHours, hourlyRate) {
+            const moneyLost = Math.round(totalHours * hourlyRate);
+            const potentialSavings = Math.round(moneyLost * 0.3); // Assuming 30% improvement
+            const roi = Math.round((potentialSavings - 299) / 299 * 100);
+            
+            document.getElementById('hourly-rate-display').textContent = '₹' + hourlyRate;
+            document.getElementById('wasted-hours-display').textContent = Math.round(totalHours);
+            document.getElementById('money-lost').textContent = '₹' + moneyLost;
+            document.getElementById('potential-savings').textContent = '₹' + potentialSavings;
+            document.getElementById('roi-value').textContent = roi + '%';
+            
+            roiResults.classList.remove('hidden');
+        }
+
+        // Validate question inputs
+        questionInputs.forEach(input => {
+            input.addEventListener('change', function() {
+                const value = parseInt(this.value);
+                if (value < 1) this.value = 1;
+                if (value > 5) this.value = 5;
+                this.classList.remove('border-red-500');
+            });
+        });
+    </script>
+</body>
+</html>
